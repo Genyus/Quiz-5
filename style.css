@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
 body{
     margin: 0;
     font-size: 16px;
-    background-color: black;
+    background-color: #ffd700;
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 *{
@@ -45,23 +46,30 @@ body{
     display: none;
 }
 
+.home-box h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .home-box h3{
     font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 15px;
+    font-weight: 600;
+    margin-bottom: 0px;
     line-height: 25px;
+    color: orangered;
 }
 
 .home-box p{
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     line-height: 22px;
-    font-weight: 400;
+    font-weight: 500;
 
 }
 
+
 .home-box p span{
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .btn{
@@ -70,7 +78,7 @@ body{
     border: none;
     color: #ffffff;
     border-radius: 5px;
-    font-weight: 500;
+    font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     display: inline-block;
@@ -211,6 +219,23 @@ body{
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0;
+}
+
+.result-box h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.result-box a{
+    width: 20rem;
+    height: 20rem;
+    color: #38a1f3;
+}
+.fa-twitter:hover{
+    transform: scale(1.5);
+}
+.icon-link {
+    width: 20rem;
+    margin-bottom: 20px;
 }
 .result-box table td{
     border: 1px solid #cccccc;

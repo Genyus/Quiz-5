@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Quiz App</title>
 </head>
 <body>
     <div class="home-box custom-box">
-        <h3>Instructions:</h3>
+        <h2>Current Affairs 2020 quiz</h2>
+        <p>The events of 2020 are unlikely to leave our memory anytime soon. This year had its fairshare of major historic events
+            with the global coronavirus pandemic to many of the world's nations in full lockdown. But what else happened in 2020?<br>
+            <br>
+            <h3>Instructions:</h3><br>
+            This quiz was created to test your knowledge on events that occured in 2020. 
+        </p>
         <p>Total number of questions: <span class="total-question"></span></p>
+        <p>Time to complete questions: <span class="timer">100</span></p> <br>
+
+        <p>You will have about 10 seconds to complete each question.
+            Good Luck!
+        </p> <br>
         <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
     </div>
 
     <div class="quiz-box custom-box hide">
-        <div class="countdown"> 60s
+        <div class="countdown"> 100
         </div>
         <div class="question-number">
         </div>
@@ -58,6 +70,12 @@
                 <td><span class="total-score"></span></td>
             </tr>
         </table>
+
+        <h3>Follow me on: 
+            <a href="https://twitter.com/Desireecodes" class="class="icon-link">
+                <i class="fa fa-twitter"></i>
+                </a>
+        </h3>
         <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
         <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
     </div>

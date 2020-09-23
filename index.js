@@ -37,12 +37,12 @@ const quiz = [
         answer: 0
     },
     {
-        q:"Which Iranian General was killed in a US drone strike in January ?",
-        options:["Commander-in-Chief of the IRGC Hossein Salami", "Quds Force top commander Qassem Soleimani", "Deputy Commander of the IRGC Ali Fadavi", "Commander of the Basij Resistance Force Gholamreza Soleimani" ],
+        q:"What event caused for more than 1.92 million Tweets, using the #WorldWarIII in early January 2020 ? ",
+        options:["Brexit negotiations", "US airstrike on Iranian commander Qassem Soleimani", "Death of US-citizen George Floyd", "Kanye West's presidential announcement" ],
         answer: 1
     },
     {
-        q:"In what month did Prince Harry and Meghan Markle annonce they were stepping down as senior royals and what social-media platform did they use?",
+        q:"In what month did Prince Harry and Meghan Markle announce they were stepping down as senior royals and what social-media platform did they use?",
         options:["February via Twitter", "January via Instagram", "April via Snapchat", "March via TikTok" ],
         answer: 1
     },

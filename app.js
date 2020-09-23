@@ -4,7 +4,6 @@ const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
 const answersIndicatorContainer = document.querySelector(".answers-indicator");
-const timer = document.querySelector(".countdown");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
@@ -65,7 +64,6 @@ function getNewQuestion(){
 
     let animationDelay = 0.15;
 
-    c = 200;
 
 
     //create options in html
