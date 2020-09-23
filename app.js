@@ -15,21 +15,22 @@ let currentQuestion;
 let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
-let c = 60;
+let c;
+let update;
 //let attempt = 0;
 
 function timer() {
     c = c-1;
-    if (c < 60) {
-        countdown.innerHTML = c;
-    }
-
+    countdown.innerHTML = c;
+    
+    
     if (c < 1) {
-        window.clearInterval(update);
+        getTimeoutResult();
+        countdown.innerHTML = "Time is up!"
     }
 }
 
-const update = setInterval("timer()", 1000);
+
 
 
 function setAvailableQuestions (){
@@ -65,7 +66,14 @@ function getNewQuestion(){
 
     let animationDelay = 0.15;
 
-    c = 60;
+//Setting timer to 10s
+    c = 10;
+
+    //restart to 0s
+    window.clearInterval(update);
+
+    update = setInterval("timer()", 1000);
+
 
 
     //create options in html
@@ -97,20 +105,32 @@ function getResult(element){
         element.classList.add("wrong");
         updateAnswerIndicator("wrong");
 
-        const optionLen = optionContainer.children.length;
-        for(let i=0; i<optionLen; i++){
-            if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
-                optionContainer.children[i].classList.add("correct");
-            }
-        }
+        highlightCorrectAnswer();
     }
    // attempt++;
 
+   
     unclickableOptions();
 }
 
+//When time is running out this happens
+function getTimeoutResult(){
+    highlightCorrectAnswer();
+    unclickableOptions();
+    window.clearInterval(update);
+    updateAnswerIndicator("wrong");
+}
 
+function highlightCorrectAnswer() {
+    const optionLen = optionContainer.children.length;
+    for(let i=0; i<optionLen; i++){
+        if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
+            optionContainer.children[i].classList.add("correct");
+        }
+    }
+}
 
+//Make options unclickable
 function unclickableOptions(){
     const optionLen = optionContainer.children.length;
     for(let i=0; i<optionLen; i++){
@@ -118,6 +138,7 @@ function unclickableOptions(){
     }
 
 }
+
 
 function answersIndicator(){
     answersIndicatorContainer.innerHTML = "";
